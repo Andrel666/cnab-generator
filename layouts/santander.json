@@ -1,0 +1,35 @@
+{
+  "bankCode": "033",
+  "bankName": "Santander",
+  "format": "XML",
+  "standard": "FEBRABAN",
+  "version": "1.0",
+  "schema": {
+    "rootElement": "ArquivoRemessa",
+    "namespace": "http://www.santander.com.br/remessa",
+    "encoding": "UTF-8",
+    "version": "1.0"
+  },
+  "fields": {
+    "header": {
+      "codigoBanco": "033",
+      "nomeEmpresa": "company_name",
+      "documentoEmpresa": "company_document",
+      "dataGeracao": "generation_date",
+      "horaGeracao": "generation_time",
+      "numeroRemessa": "remittance_number"
+    },
+    "payment": {
+      "numeroDocumento": "document_number",
+      "nomeBeneficiario": "beneficiary_name",
+      "documentoBeneficiario": "beneficiary_document",
+      "codigoBanco": "beneficiary_bank",
+      "agencia": "beneficiary_agency",
+      "conta": "beneficiary_account",
+      "valorPagamento": "amount",
+      "dataPagamento": "payment_date",
+      "finalidadePagamento": "payment_purpose",
+      "codigoFinalidade": "01"
+    }
+  }
+}

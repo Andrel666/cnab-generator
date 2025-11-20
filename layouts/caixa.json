@@ -1,0 +1,35 @@
+{
+  "bankCode": "104",
+  "bankName": "Caixa Econômica Federal",
+  "format": "XML",
+  "standard": "FEBRABAN",
+  "version": "1.0",
+  "schema": {
+    "rootElement": "RemessaPagamentos",
+    "namespace": "http://www.caixa.gov.br/pagamentos",
+    "encoding": "UTF-8",
+    "version": "1.0"
+  },
+  "fields": {
+    "header": {
+      "codigoBanco": "104",
+      "nomeEmpresa": "company_name",
+      "documentoEmpresa": "company_document",
+      "dataGeracao": "generation_date",
+      "horaGeracao": "generation_time",
+      "numeroRemessa": "remittance_number"
+    },
+    "payment": {
+      "numeroDocumento": "document_number",
+      "nomeBeneficiario": "beneficiary_name",
+      "documentoBeneficiario": "beneficiary_document",
+      "codigoBanco": "beneficiary_bank",
+      "agencia": "beneficiary_agency",
+      "conta": "beneficiary_account",
+      "valorPagamento": "amount",
+      "dataPagamento": "payment_date",
+      "finalidadePagamento": "payment_purpose",
+      "codigoFinalidade": "10"
+    }
+  }
+}

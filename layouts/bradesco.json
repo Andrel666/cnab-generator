@@ -1,0 +1,35 @@
+{
+  "bankCode": "237",
+  "bankName": "Bradesco",
+  "format": "XML",
+  "standard": "FEBRABAN",
+  "version": "1.0",
+  "schema": {
+    "rootElement": "DocumentoCobranca",
+    "namespace": "http://www.bradesco.com.br/cobranca",
+    "encoding": "UTF-8",
+    "version": "1.0"
+  },
+  "fields": {
+    "header": {
+      "codigoBanco": "237",
+      "nomeEmpresa": "company_name",
+      "documentoEmpresa": "company_document",
+      "dataGeracao": "generation_date",
+      "horaGeracao": "generation_time",
+      "numeroRemessa": "remittance_number"
+    },
+    "payment": {
+      "numeroDocumento": "document_number",
+      "nomeBeneficiario": "beneficiary_name",
+      "documentoBeneficiario": "beneficiary_document",
+      "codigoBanco": "beneficiary_bank",
+      "agencia": "beneficiary_agency",
+      "conta": "beneficiary_account",
+      "valorPagamento": "amount",
+      "dataPagamento": "payment_date",
+      "finalidadePagamento": "payment_purpose",
+      "codigoFinalidade": "98"
+    }
+  }
+}

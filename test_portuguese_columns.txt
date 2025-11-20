@@ -1,0 +1,1 @@
+{"error":"Missing required columns: beneficiary_name, beneficiary_bank, beneficiary_agency, beneficiary_account, amount, payment_date"}

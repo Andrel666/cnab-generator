@@ -1,0 +1,89 @@
+{
+  "bankCode": "001",
+  "bankName": "Banco do Brasil",
+  "standard": "CNAB240",
+  "company": {
+    "type": "required",
+    "fields": ["companyName", "companyDocument"]
+  },
+  "records": {
+    "HEADER_ARQUIVO": {
+      "type": "0",
+      "fields": [
+        { "name": "banco_codigo", "start": 1, "end": 3, "length": 3, "type": "num", "default": "001" },
+        { "name": "lote_servico", "start": 4, "end": 7, "length": 4, "type": "num", "default": "0000" },
+        { "name": "registro_tipo", "start": 8, "end": 8, "length": 1, "type": "num", "default": "0" },
+        { "name": "filler1", "start": 9, "end": 17, "length": 9, "type": "alfa", "default": "         " },
+        { "name": "empresa_tipo_inscricao", "start": 18, "end": 18, "length": 1, "type": "num" },
+        { "name": "empresa_numero_inscricao", "start": 19, "end": 32, "length": 14, "type": "num" },
+        { "name": "empresa_nome", "start": 73, "end": 102, "length": 30, "type": "alfa" },
+        { "name": "banco_nome", "start": 103, "end": 132, "length": 30, "type": "alfa", "default": "BANCO DO BRASIL S.A." },
+        { "name": "arquivo_codigo", "start": 143, "end": 143, "length": 1, "type": "num", "default": "1" },
+        { "name": "arquivo_data_geracao", "start": 144, "end": 151, "length": 8, "type": "num" },
+        { "name": "arquivo_hora_geracao", "start": 152, "end": 157, "length": 6, "type": "num" },
+        { "name": "arquivo_sequencia", "start": 158, "end": 163, "length": 6, "type": "num", "default": "000001" },
+        { "name": "layout_arquivo_versao", "start": 164, "end": 166, "length": 3, "type": "num", "default": "050" },
+        { "name": "filler2", "start": 167, "end": 240, "length": 74, "type": "alfa", "default": "" }
+      ]
+    },
+    "HEADER_LOTE": {
+      "type": "1",
+      "fields": [
+        { "name": "banco_codigo", "start": 1, "end": 3, "length": 3, "type": "num", "default": "001" },
+        { "name": "lote_servico", "start": 4, "end": 7, "length": 4, "type": "num", "default": "0001" },
+        { "name": "registro_tipo", "start": 8, "end": 8, "length": 1, "type": "num", "default": "1" },
+        { "name": "operacao_tipo", "start": 9, "end": 9, "length": 1, "type": "alfa", "default": "C" },
+        { "name": "servico_tipo", "start": 10, "end": 11, "length": 2, "type": "num", "default": "20" },
+        { "name": "forma_lancamento", "start": 12, "end": 13, "length": 2, "type": "num", "default": "01" },
+        { "name": "layout_lote_versao", "start": 14, "end": 16, "length": 3, "type": "num", "default": "030" },
+        { "name": "filler1", "start": 17, "end": 17, "length": 1, "type": "alfa", "default": " " },
+        { "name": "empresa_tipo_inscricao", "start": 18, "end": 18, "length": 1, "type": "num" },
+        { "name": "empresa_numero_inscricao", "start": 19, "end": 32, "length": 14, "type": "num" },
+        { "name": "empresa_nome", "start": 73, "end": 102, "length": 30, "type": "alfa" },
+        { "name": "filler2", "start": 103, "end": 240, "length": 138, "type": "alfa", "default": "" }
+      ]
+    },
+    "SEGMENTO_A": {
+      "type": "3A",
+      "fields": [
+        { "name": "banco_codigo", "start": 1, "end": 3, "length": 3, "type": "num", "default": "001" },
+        { "name": "lote_servico", "start": 4, "end": 7, "length": 4, "type": "num", "default": "0001" },
+        { "name": "registro_tipo", "start": 8, "end": 8, "length": 1, "type": "num", "default": "3" },
+        { "name": "registro_sequencial", "start": 9, "end": 13, "length": 5, "type": "num" },
+        { "name": "segmento_tipo", "start": 14, "end": 14, "length": 1, "type": "alfa", "default": "A" },
+        { "name": "movimento_tipo", "start": 15, "end": 17, "length": 3, "type": "num", "default": "000" },
+        { "name": "favorecido_banco", "start": 21, "end": 23, "length": 3, "type": "num" },
+        { "name": "favorecido_agencia", "start": 24, "end": 28, "length": 5, "type": "num" },
+        { "name": "favorecido_conta", "start": 30, "end": 41, "length": 12, "type": "num" },
+        { "name": "favorecido_nome", "start": 44, "end": 73, "length": 30, "type": "alfa" },
+        { "name": "credito_data", "start": 94, "end": 101, "length": 8, "type": "num" },
+        { "name": "credito_valor", "start": 120, "end": 134, "length": 15, "type": "num", "decimals": 2 },
+        { "name": "filler", "start": 135, "end": 240, "length": 106, "type": "alfa", "default": "" }
+      ]
+    },
+    "TRAILER_LOTE": {
+      "type": "5",
+      "fields": [
+        { "name": "banco_codigo", "start": 1, "end": 3, "length": 3, "type": "num", "default": "001" },
+        { "name": "lote_servico", "start": 4, "end": 7, "length": 4, "type": "num", "default": "0001" },
+        { "name": "registro_tipo", "start": 8, "end": 8, "length": 1, "type": "num", "default": "5" },
+        { "name": "filler1", "start": 9, "end": 17, "length": 9, "type": "alfa", "default": "" },
+        { "name": "quantidade_registros", "start": 18, "end": 23, "length": 6, "type": "num" },
+        { "name": "valor_total", "start": 24, "end": 41, "length": 18, "type": "num", "decimals": 2 },
+        { "name": "filler2", "start": 42, "end": 240, "length": 199, "type": "alfa", "default": "" }
+      ]
+    },
+    "TRAILER_ARQUIVO": {
+      "type": "9",
+      "fields": [
+        { "name": "banco_codigo", "start": 1, "end": 3, "length": 3, "type": "num", "default": "001" },
+        { "name": "lote_servico", "start": 4, "end": 7, "length": 4, "type": "num", "default": "9999" },
+        { "name": "registro_tipo", "start": 8, "end": 8, "length": 1, "type": "num", "default": "9" },
+        { "name": "filler1", "start": 9, "end": 17, "length": 9, "type": "alfa", "default": "" },
+        { "name": "quantidade_lotes", "start": 18, "end": 23, "length": 6, "type": "num", "default": "000001" },
+        { "name": "quantidade_registros", "start": 24, "end": 29, "length": 6, "type": "num" },
+        { "name": "filler2", "start": 30, "end": 240, "length": 211, "type": "alfa", "default": "" }
+      ]
+    }
+  }
+}
